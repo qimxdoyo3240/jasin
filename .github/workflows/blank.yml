@@ -31,4 +31,4 @@ jobs:
 
       - name: Run GPU job
         run: |
-          modal run modal_app.py --param "from github actions"
+          modal run modal_app.py
